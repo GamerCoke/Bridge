@@ -9,7 +9,7 @@ namespace Bridge
     /// <summary>
     /// This is a MC class
     /// </summary>
-    public class MC
+    public class MC : BaseVehicle
     {
         /// <summary>
         /// Licenseplate for the MC
@@ -25,7 +25,7 @@ namespace Bridge
         /// Returns price
         /// </summary>
         /// <returns>120</returns>
-        public double Price()
+        public override double Price()
         {
             return 120;
         }
@@ -34,7 +34,7 @@ namespace Bridge
         /// Returns Vehicle type
         /// </summary>
         /// <returns>"MC"</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "MC";
         }

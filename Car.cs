@@ -3,7 +3,7 @@
     /// <summary>
     /// This is a Car class
     /// </summary>
-    public class Car
+    public class Car : BaseVehicle
     {
         /// <summary>
         /// The license on the licenseplate, of the car
@@ -19,7 +19,7 @@
         /// Returns the price for crossing the bridge
         /// </summary>
         /// <returns>230</returns>
-        public double Price()
+        public override double Price()
         {
             return 230;
         }
@@ -28,7 +28,7 @@
         /// Returns the type of vehicle
         /// </summary>
         /// <returns>"Car"</returns>
-        public string VehicleType()
+        public override string VehicleType()
         {
             return "Car";
         }
