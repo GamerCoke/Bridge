@@ -12,14 +12,37 @@ namespace Bridge
     public class MC : BaseVehicle
     {
         /// <summary>
-        /// Licenseplate for the MC
+        /// Actual storage of licenseplate
         /// </summary>
-        public string Licenseplate;
+        private string _licenseplate;
+
+        /// <summary>
+        /// Licenseplate for the MC
+        /// 
+        /// Contains exception handling
+        /// License needs to be less than 7 characters long, and not null
+        /// </summary>
+        public new string Licenseplate
+        {
+            get => _licenseplate;
+            set
+            {
+                if (value != null && value.Length > 7)
+                {
+                    throw new ArgumentException("Licenseplates cannot be longer than 7 characters.");
+                }
+                if (value == null)
+                {
+                    throw new ArgumentException("Licenseplates not allowed to be null");
+                }
+                _licenseplate = value;
+            }
+        }
 
         /// <summary>
         /// Date of entry
         /// </summary>
-        public DateTime Date;
+        public new DateTime Date;
 
         /// <summary>
         /// Returns price
