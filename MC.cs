@@ -45,11 +45,19 @@ namespace Bridge
         public new DateTime Date;
 
         /// <summary>
+        /// This checks for use of a BroBizz(tm)
+        /// </summary>
+        public new bool BroBizz = false;
+
+
+        /// <summary>
         /// Returns price
         /// </summary>
         /// <returns>120</returns>
         public override double Price()
         {
+            if (BroBizz)
+                return 120 * 0.9;
             return 120;
         }
 

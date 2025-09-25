@@ -39,11 +39,19 @@
         public new DateTime Date;
 
         /// <summary>
+        /// This checks for use of a BroBizz(tm)
+        /// </summary>
+        public new bool BroBizz = false;
+
+
+        /// <summary>
         /// Returns the price for crossing the bridge
         /// </summary>
         /// <returns>230</returns>
         public override double Price()
         {
+            if (BroBizz)
+                return 230 * 0.9;
             return 230;
         }
 

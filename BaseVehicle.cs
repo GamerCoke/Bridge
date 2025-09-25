@@ -48,6 +48,11 @@ namespace Bridge
         public DateTime Date;
 
         /// <summary>
+        /// This checks for use of a BroBizz(tm)
+        /// </summary>
+        public bool BroBizz = false;
+
+        /// <summary>
         /// This is the price for the vehicle
         /// </summary>
         /// <returns>double</returns>
